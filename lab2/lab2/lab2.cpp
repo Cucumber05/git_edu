@@ -37,9 +37,11 @@ int main()
         if (Theta < 0)
             Theta += 2.0 * PI;
         r = p / (1.0 + e * cos(Theta));
-        Vn = sqrt(mu / p) * (1.0 + e * cos(Theta));
-        Vr = sqrt(mu / p) * (e * sin(Theta));
+        Vn = (sqrt(mu / p) * (1.0 + e * cos(Theta)));
+        Vr = (sqrt(mu / p) * (e * sin(Theta)));
         V = sqrt(pow(Vr, 2) + pow(Vn, 2));
+
+       
         file << t << "\t" << M << "\t" << E << "\t" << Theta << "\t" << r << "\t" << Vr << "\t" << Vn << "\t" << V << std::endl;
     }
     file.close();
